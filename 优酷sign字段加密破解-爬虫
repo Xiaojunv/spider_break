@@ -1,0 +1,192 @@
+function test(){
+
+var t = function(e) {
+    return u.resolve(e),
+    c.promise
+}
+var n = {api: "mtop.youku.soku.yksearch",
+appKey: 23774304,
+data: "{\"pg\":\"1\",\"pz\":\"10\",\"appScene\":\"default_page\",\"appCaller\":\"youku-search-sdk\"}",
+dataType: "json",
+ecode: 1,
+type: "get",
+v: "2.0",
+}, r = {AntiCreep: undefined,
+AntiFlood: undefined,
+H5Request: true,
+LoginRequest: undefined,
+WindVaneRequest: false,
+failureCallback: undefined,
+getJSON: true,
+mainDomain: "youku.com",
+pageDomain: "youku.com",
+prefix: "acs",
+safariGoLogin: true,
+subDomain: "",
+successCallback: undefined,
+token: "512445cfb9dea5524f40337349ef7365",
+useAlipayJSBridge: false,
+useJsonpResultType: false,
+};
+if (r.hostSetting && r.hostSetting[e.location.hostname]) {
+    var i = r.hostSetting[e.location.hostname];
+    i.prefix && (r.prefix = i.prefix),
+    i.subDomain && (r.subDomain = i.subDomain),
+    i.mainDomain && (r.mainDomain = i.mainDomain)
+}
+if (!0 === r.H5Request) {
+    var o = "//" + (r.prefix ? r.prefix + "." : "") + (r.subDomain ? r.subDomain + "." : "") + r.mainDomain + "/h5/" + n.api.toLowerCase() + "/" + n.v.toLowerCase() + "/"
+      , a = n.appKey || ("waptest" === r.subDomain ? "4272" : "12574478")
+      , u = (new Date).getTime()
+      , c = function(e) {
+        function t(e, t) {
+            return e << t | e >>> 32 - t
+        }
+        function n(e, t) {
+            var n, r, i, o, a;
+            return i = 2147483648 & e,
+            o = 2147483648 & t,
+            a = (1073741823 & e) + (1073741823 & t),
+            (n = 1073741824 & e) & (r = 1073741824 & t) ? 2147483648 ^ a ^ i ^ o : n | r ? 1073741824 & a ? 3221225472 ^ a ^ i ^ o : 1073741824 ^ a ^ i ^ o : a ^ i ^ o
+        }
+        function r(e, r, i, o, a, u, c) {
+            return e = n(e, n(n(function(e, t, n) {
+                return e & t | ~e & n
+            }(r, i, o), a), c)),
+            n(t(e, u), r)
+        }
+        function i(e, r, i, o, a, u, c) {
+            return e = n(e, n(n(function(e, t, n) {
+                return e & n | t & ~n
+            }(r, i, o), a), c)),
+            n(t(e, u), r)
+        }
+        function o(e, r, i, o, a, u, c) {
+            return e = n(e, n(n(function(e, t, n) {
+                return e ^ t ^ n
+            }(r, i, o), a), c)),
+            n(t(e, u), r)
+        }
+        function a(e, r, i, o, a, u, c) {
+            return e = n(e, n(n(function(e, t, n) {
+                return t ^ (e | ~n)
+            }(r, i, o), a), c)),
+            n(t(e, u), r)
+        }
+        function u(e) {
+            var t, n = "", r = "";
+            for (t = 0; 3 >= t; t++)
+                n += (r = "0" + (e >>> 8 * t & 255).toString(16)).substr(r.length - 2, 2);
+            return n
+        }
+        var c, s, f, l, d, h, p, v, m, g;
+        for (g = function(e) {
+            for (var t, n = e.length, r = n + 8, i = 16 * ((r - r % 64) / 64 + 1), o = new Array(i - 1), a = 0, u = 0; n > u; )
+                a = u % 4 * 8,
+                o[t = (u - u % 4) / 4] = o[t] | e.charCodeAt(u) << a,
+                u++;
+            return a = u % 4 * 8,
+            o[t = (u - u % 4) / 4] = o[t] | 128 << a,
+            o[i - 2] = n << 3,
+            o[i - 1] = n >>> 29,
+            o
+        }(e = function(e) {
+            e = e.replace(/\r\n/g, "\n");
+            for (var t = "", n = 0; n < e.length; n++) {
+                var r = e.charCodeAt(n);
+                128 > r ? t += String.fromCharCode(r) : r > 127 && 2048 > r ? (t += String.fromCharCode(r >> 6 | 192),
+                t += String.fromCharCode(63 & r | 128)) : (t += String.fromCharCode(r >> 12 | 224),
+                t += String.fromCharCode(r >> 6 & 63 | 128),
+                t += String.fromCharCode(63 & r | 128))
+            }
+            return t
+        }(e)),
+        h = 1732584193,
+        p = 4023233417,
+        v = 2562383102,
+        m = 271733878,
+        c = 0; c < g.length; c += 16)
+            s = h,
+            f = p,
+            l = v,
+            d = m,
+            h = r(h, p, v, m, g[c + 0], 7, 3614090360),
+            m = r(m, h, p, v, g[c + 1], 12, 3905402710),
+            v = r(v, m, h, p, g[c + 2], 17, 606105819),
+            p = r(p, v, m, h, g[c + 3], 22, 3250441966),
+            h = r(h, p, v, m, g[c + 4], 7, 4118548399),
+            m = r(m, h, p, v, g[c + 5], 12, 1200080426),
+            v = r(v, m, h, p, g[c + 6], 17, 2821735955),
+            p = r(p, v, m, h, g[c + 7], 22, 4249261313),
+            h = r(h, p, v, m, g[c + 8], 7, 1770035416),
+            m = r(m, h, p, v, g[c + 9], 12, 2336552879),
+            v = r(v, m, h, p, g[c + 10], 17, 4294925233),
+            p = r(p, v, m, h, g[c + 11], 22, 2304563134),
+            h = r(h, p, v, m, g[c + 12], 7, 1804603682),
+            m = r(m, h, p, v, g[c + 13], 12, 4254626195),
+            v = r(v, m, h, p, g[c + 14], 17, 2792965006),
+            h = i(h, p = r(p, v, m, h, g[c + 15], 22, 1236535329), v, m, g[c + 1], 5, 4129170786),
+            m = i(m, h, p, v, g[c + 6], 9, 3225465664),
+            v = i(v, m, h, p, g[c + 11], 14, 643717713),
+            p = i(p, v, m, h, g[c + 0], 20, 3921069994),
+            h = i(h, p, v, m, g[c + 5], 5, 3593408605),
+            m = i(m, h, p, v, g[c + 10], 9, 38016083),
+            v = i(v, m, h, p, g[c + 15], 14, 3634488961),
+            p = i(p, v, m, h, g[c + 4], 20, 3889429448),
+            h = i(h, p, v, m, g[c + 9], 5, 568446438),
+            m = i(m, h, p, v, g[c + 14], 9, 3275163606),
+            v = i(v, m, h, p, g[c + 3], 14, 4107603335),
+            p = i(p, v, m, h, g[c + 8], 20, 1163531501),
+            h = i(h, p, v, m, g[c + 13], 5, 2850285829),
+            m = i(m, h, p, v, g[c + 2], 9, 4243563512),
+            v = i(v, m, h, p, g[c + 7], 14, 1735328473),
+            h = o(h, p = i(p, v, m, h, g[c + 12], 20, 2368359562), v, m, g[c + 5], 4, 4294588738),
+            m = o(m, h, p, v, g[c + 8], 11, 2272392833),
+            v = o(v, m, h, p, g[c + 11], 16, 1839030562),
+            p = o(p, v, m, h, g[c + 14], 23, 4259657740),
+            h = o(h, p, v, m, g[c + 1], 4, 2763975236),
+            m = o(m, h, p, v, g[c + 4], 11, 1272893353),
+            v = o(v, m, h, p, g[c + 7], 16, 4139469664),
+            p = o(p, v, m, h, g[c + 10], 23, 3200236656),
+            h = o(h, p, v, m, g[c + 13], 4, 681279174),
+            m = o(m, h, p, v, g[c + 0], 11, 3936430074),
+            v = o(v, m, h, p, g[c + 3], 16, 3572445317),
+            p = o(p, v, m, h, g[c + 6], 23, 76029189),
+            h = o(h, p, v, m, g[c + 9], 4, 3654602809),
+            m = o(m, h, p, v, g[c + 12], 11, 3873151461),
+            v = o(v, m, h, p, g[c + 15], 16, 530742520),
+            h = a(h, p = o(p, v, m, h, g[c + 2], 23, 3299628645), v, m, g[c + 0], 6, 4096336452),
+            m = a(m, h, p, v, g[c + 7], 10, 1126891415),
+            v = a(v, m, h, p, g[c + 14], 15, 2878612391),
+            p = a(p, v, m, h, g[c + 5], 21, 4237533241),
+            h = a(h, p, v, m, g[c + 12], 6, 1700485571),
+            m = a(m, h, p, v, g[c + 3], 10, 2399980690),
+            v = a(v, m, h, p, g[c + 10], 15, 4293915773),
+            p = a(p, v, m, h, g[c + 1], 21, 2240044497),
+            h = a(h, p, v, m, g[c + 8], 6, 1873313359),
+            m = a(m, h, p, v, g[c + 15], 10, 4264355552),
+            v = a(v, m, h, p, g[c + 6], 15, 2734768916),
+            p = a(p, v, m, h, g[c + 13], 21, 1309151649),
+            h = a(h, p, v, m, g[c + 4], 6, 4149444226),
+            m = a(m, h, p, v, g[c + 11], 10, 3174756917),
+            v = a(v, m, h, p, g[c + 2], 15, 718787259),
+            p = a(p, v, m, h, g[c + 9], 21, 3951481745),
+            h = n(h, s),
+            p = n(p, f),
+            v = n(v, l),
+            m = n(m, d);
+        return (u(h) + u(p) + u(v) + u(m)).toLowerCase()
+    }(r.token + "&" + u + "&" + a + "&" + n.data)
+      , s = {
+        jsv: "2.5.7",
+        appKey: a,
+        t: u,
+        sign: c
+    }
+      , f = {
+        data: n.data,
+        ua: n.ua
+    };
+}
+return s;
+}
